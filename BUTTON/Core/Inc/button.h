@@ -20,7 +20,6 @@ extern int button3_flag;
 extern int button3_flag2;
 
 int isButton1Pressed();
-
 int isButton2PressedLong();
 
 void getKeyInput();

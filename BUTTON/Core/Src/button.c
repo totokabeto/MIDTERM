@@ -27,7 +27,9 @@ int button1_flag = 0;
 int button2_flag = 0;
 int button3_flag = 0;
 int button2_flag2 = 0;
-int button3_flag3 =0;
+int button3_flag2 = 0;
+
+
 void subKeyProcess(){
 button1_flag = 1;
 }
@@ -46,7 +48,6 @@ if (KeyReg2 != KeyReg3){
 KeyReg3 = KeyReg2;
 
 if (KeyReg3 == PRESSED_STATE){
-
 TimeOutForKeyPress = 300;
 subKeyProcess();
 }
@@ -75,10 +76,9 @@ subKeyProcess2();
 TimeOutForKeyPress --;
 if (TimeOutForKeyPress == 0){
 if (Key2Reg3 == PRESSED_STATE){
-button2_flag2 =1;
+button2_flag2 = 1;
 TimeOutForKeyPress = 100;
 }
-
 }
 }
 }
@@ -100,7 +100,7 @@ subKeyProcess3();
 TimeOutForKeyPress --;
 if (TimeOutForKeyPress == 0){
 if (Key3Reg3 == PRESSED_STATE){
-button3_flag3 =1;
+button3_flag2 =1;
 TimeOutForKeyPress = 100;
 }
 

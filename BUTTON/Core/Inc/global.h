@@ -12,9 +12,6 @@
 #include "button.h"
 
 #define INIT        	1
-#define AUTO_RED    	2
-#define AUTO_GREEN  	3
-#define AUTO_YELLOW  	4
 
 #define MAN_INC0 	12
 #define MAN_INC1 	13

@@ -14,77 +14,82 @@ switch(status){
 case INIT :
 display7seg(0);
 status = MAN_INC0;
+setTimer2(200);
 ledstatus = LED_ON;
-setTimer2(1000);
+
 break;
 case AUTO_0:
-if (button2_flag == 1){
-button2_flag = 0;
-status = MAN_INC0;
-}
+	display7seg(0);
 if (timer_flag2 ==1 ){
 timer_flag2 =0;
-display7seg(0);
 }
-break;
-case AUTO_1:
-//TOD0
 if (button2_flag == 1){
 button2_flag = 0;
 status = MAN_INC1;
 }
+break;
+case AUTO_1:
+//TOD0
+	display7seg(1);
 if (timer_flag2 == 1){
 timer_flag2 =0;
-display7seg(1);
+
 status = AUTO_0;
 setTimer2(100);
 }
-break;
-case AUTO_2:
 if (button2_flag == 1){
 button2_flag = 0;
 status = MAN_INC2;
 }
+break;
+case AUTO_2:
+display7seg(2);
 if (timer_flag2 == 1){
 timer_flag2 =0;
-display7seg(2);
 status = AUTO_1;
 setTimer2(100);
 }
-case AUTO_3:
 if (button2_flag == 1){
 button2_flag = 0;
 status = MAN_INC3;
 }
+case AUTO_3:
+	display7seg(3);
 if (timer_flag2 == 1){
 timer_flag2 =0;
-display7seg(3);
+
 status = AUTO_2;
 setTimer2(100);
 }
-break;
-case AUTO_4:
 if (button2_flag == 1){
 button2_flag = 0;
 status = MAN_INC4;
 }
+break;
+case AUTO_4:
+	display7seg(4);
 if (timer_flag2 == 1){
 timer_flag2 =0;
-display7seg(4);
+
 status = AUTO_3;
 setTimer2(100);
 }
-break;
-case AUTO_5:
 if (button2_flag == 1){
 button2_flag = 0;
 status = MAN_INC5;
 }
+break;
+case AUTO_5:
+	display7seg(5);
 if (timer_flag2 == 1){
 timer_flag2 =0;
-display7seg(5);
+
 status = AUTO_4;
 setTimer2(100);
+}
+if (button2_flag == 1){
+button2_flag = 0;
+status = MAN_INC5;
 }
 break;
 case AUTO_6:
@@ -121,11 +126,8 @@ timer_flag2 =0;
 display7seg(8);
 status = AUTO_7;
 setTimer2(100);
-
-
 }
 break;
-
 case AUTO_9:
 if (button2_flag == 1){
 button2_flag = 0;
@@ -136,7 +138,6 @@ timer_flag2 = 0 ;
 display7seg(9);
 status = AUTO_8;
 setTimer2(100);
-
 }
 break;
 default:
