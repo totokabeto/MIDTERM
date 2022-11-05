@@ -5,11 +5,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/LedBlinky.c \
 ../Core/Src/button.c \
-../Core/Src/display7seg.c \
 ../Core/Src/fsm_automatic.c \
-../Core/Src/fsm_longpress.c \
 ../Core/Src/fsm_manual.c \
 ../Core/Src/global.c \
 ../Core/Src/main.c \
@@ -21,11 +18,8 @@ C_SRCS += \
 ../Core/Src/system_stm32f1xx.c 
 
 OBJS += \
-./Core/Src/LedBlinky.o \
 ./Core/Src/button.o \
-./Core/Src/display7seg.o \
 ./Core/Src/fsm_automatic.o \
-./Core/Src/fsm_longpress.o \
 ./Core/Src/fsm_manual.o \
 ./Core/Src/global.o \
 ./Core/Src/main.o \
@@ -37,11 +31,8 @@ OBJS += \
 ./Core/Src/system_stm32f1xx.o 
 
 C_DEPS += \
-./Core/Src/LedBlinky.d \
 ./Core/Src/button.d \
-./Core/Src/display7seg.d \
 ./Core/Src/fsm_automatic.d \
-./Core/Src/fsm_longpress.d \
 ./Core/Src/fsm_manual.d \
 ./Core/Src/global.d \
 ./Core/Src/main.d \

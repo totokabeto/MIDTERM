@@ -7,5 +7,3 @@
 #include "global.h"
 
 int status = 0;
-
-int ledstatus = 0;

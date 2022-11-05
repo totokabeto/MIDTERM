@@ -4,26 +4,20 @@
  *  Created on: Oct 5, 2022
  *      Author: Admin
  */
-#include "software_timer.h"
+#include "Software_timer.h"
 int timer_counter1 = 0;
 int timer_counter2 = 0;
-int timer_counter3 = 0;
 int timer_flag1 = 0;
 int timer_flag2 = 0;
-int timer_flag3 = 0;
-void setTimer1(int duration){
+void SetTimer1(int duration){
 	timer_counter1 = duration;
 	timer_flag1 = 0;
 	}
-void setTimer2(int duration){
+void SetTimer2(int duration){
 	timer_counter2 = duration;
 	timer_flag2 = 0;
 	}
-void setTimer3(int duration){
-	timer_counter3 = duration;
-	timer_flag3 = 0;
-	}
-void timerRun(){
+void TimerRun(){
 	if(timer_counter1){
 		timer_counter1--;
 	}
@@ -36,12 +30,6 @@ void timerRun(){
 	if(timer_counter2 <= 0 ){
 		timer_flag2 = 1;
 		}
-	if(timer_counter3){
-			timer_counter3--;
-			}
-		if(timer_counter3 <= 0 ){
-			timer_flag3 = 1;
-			}
 
 }
 

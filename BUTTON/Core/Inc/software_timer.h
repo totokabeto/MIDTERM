@@ -10,11 +10,9 @@
 
 extern int timer_flag1;
 extern int timer_flag2;
-extern int timer_flag3;
-void timerRun();
-void setTimer1(int duration);
-void setTimer2(int duration);
-void setTimer3(int duration);
+void TimerRun();
+void SetTimer1(int duration);
+void SetTimer2(int duration);
 
 
 #endif /* INC_SOFTWARE_TIMER_H_ */
