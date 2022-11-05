@@ -15,7 +15,7 @@ display7seg(0);
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC1;
-setTimer2(200);}
+setTimer2(1000);}
 if (button2_flag2 == 1){
 	button2_flag2 =0;
 status = LONG_0;
@@ -24,7 +24,7 @@ setTimer1(100);
 if (button3_flag == 1){
 button3_flag =0;
 status = MAN_INC9;
-setTimer2(200);
+setTimer2(1000);
 }
 if (timer_flag2 == 1){
 timer_flag2 = 0;
@@ -47,7 +47,7 @@ status = INIT;
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC2;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 	button2_flag2 =0;
@@ -57,7 +57,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC0;
-	setTimer2(200);}
+	setTimer2(1000);}
 if (timer_flag2 == 1){
 timer_flag2 = 0;
 status = AUTO_1;
@@ -79,7 +79,7 @@ status = INIT;
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC3;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 	button2_flag2 = 0;
@@ -89,7 +89,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC1;
-	setTimer2(200);}
+	setTimer2(1000);}
 
 if (timer_flag2 == 1){
 timer_flag2 = 0;
@@ -113,7 +113,7 @@ status = INIT;
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC4;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 	button2_flag2 =0;
@@ -123,7 +123,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC2;
-	setTimer2(200);
+	setTimer2(1000);
 }
 
 if (timer_flag2 == 1){
@@ -148,7 +148,7 @@ status = INIT;
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC5;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 	button2_flag2 =0;
@@ -158,7 +158,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag = 0;
 	status = MAN_INC3;
-	setTimer2(200);
+	setTimer2(1000);
 }
 if (timer_flag2 == 1){
 timer_flag2 = 0;
@@ -180,7 +180,7 @@ display7seg(5);
 if (button2_flag == 1){
 	button2_flag =0;
 status = MAN_INC6;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 	button2_flag2 =0;
@@ -191,7 +191,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC4;
-	setTimer2(200);}
+	setTimer2(1000);}
 if (timer_flag2 == 1){
 timer_flag2 = 0;
 status = AUTO_5;
@@ -212,7 +212,7 @@ status = INIT;
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC7;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 button2_flag2 = 0;
@@ -222,7 +222,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC5;
-	setTimer2(200);}
+	setTimer2(1000);}
 if (timer_flag2 == 1){
 timer_flag2 = 0;
 status = AUTO_6;
@@ -243,7 +243,7 @@ status = INIT;
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC8;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 button2_flag2 = 0;
@@ -253,7 +253,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC6;
-	setTimer2(200);}
+	setTimer2(1000);}
 if (timer_flag2 == 1){
 timer_flag2 = 0;
 status = AUTO_7;
@@ -275,7 +275,7 @@ display7seg(8);
 if (button2_flag == 1){
 button2_flag =0;
 status = MAN_INC9;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag2 == 1){
 button2_flag2 =0;
@@ -285,7 +285,7 @@ setTimer1(100);
 if (button3_flag == 1){
 	button3_flag =0;
 	status = MAN_INC7;
-	setTimer2(200);}
+	setTimer2(1000);}
 if (timer_flag2 == 1){
 timer_flag2 = 0;
 status = AUTO_8;
@@ -302,7 +302,7 @@ case MAN_INC9:
 if (button1_flag ==1 ){
 button1_flag = 0;
 status = INIT;
-setTimer2(200);
+setTimer2(1000);
 }
 if (button2_flag == 1){
 button2_flag = 0;
@@ -316,7 +316,7 @@ setTimer1(100);
 if (timer_flag2 == 1){
 timer_flag2 = 0;
 status = AUTO_9;
-setTimer2(100);
+setTimer2(1000);
 }
 if (button3_flag == 1){
 	button3_flag =0;
@@ -333,5 +333,6 @@ default :
 break;
 }
 }
+
 
 

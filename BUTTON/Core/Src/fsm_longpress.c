@@ -1,11 +1,8 @@
 /*
 * fsm_longpress.c
 *
-*  Created on: Nov 5, 2022
-*      Author: BOSCH - HCMUT
 */
 
-#include "fsm_longpress.h"
 
 /*
 * fsm_manual.c
@@ -22,6 +19,10 @@ void fsm_longpress_run(){
 switch (status){
 case LONG_0:
 	display7seg(0);
+	if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 	if (timer_flag1 ==1 ){
 	timer_flag1 = 0;
 	if (button2_flag2 ==1){
@@ -34,6 +35,10 @@ case LONG_0:
 break;
 case LONG_1:
 	display7seg(1);
+	if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 	if (timer_flag1 ==1 ){
 	timer_flag1 = 0;
 	if (button2_flag2 ==1){
@@ -44,6 +49,10 @@ case LONG_1:
 break;
 case LONG_2:
 	display7seg(2);
+	if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 	if (timer_flag1 ==1 ){
 	timer_flag1 = 0;
 	if (button2_flag2 ==1){
@@ -54,6 +63,10 @@ case LONG_2:
 break;
 case LONG_3:
 	display7seg(3);
+	if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 	if (timer_flag1 ==1 ){
 	timer_flag1 = 0;
 	if (button2_flag2 ==1){
@@ -64,6 +77,10 @@ case LONG_3:
 break;
 case LONG_4:
 	display7seg(4);
+	if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 	if (timer_flag1 ==1 ){
 		timer_flag1 =0;
 	timer_flag1 = 0;
@@ -75,6 +92,10 @@ case LONG_4:
 break;
 case LONG_5:
 	display7seg(5);
+	if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 	if (timer_flag1 ==1 ){
 	timer_flag1 = 0;
 	if (button2_flag2 ==1){
@@ -84,6 +105,10 @@ case LONG_5:
 	}
 	break;
 case LONG_6:
+	if (button1_flag ==1 ){
+		button1_flag = 0;
+		status = INIT;
+		}
 	display7seg(6);
 if (timer_flag1 ==1 ){
 timer_flag1 = 0;
@@ -95,6 +120,10 @@ setTimer1(100);}
 break;
 case LONG_7:
 display7seg(7);
+if (button1_flag ==1 ){
+	button1_flag = 0;
+	status = INIT;
+	}
 if (timer_flag1 == 1){
 timer_flag1 = 0;
 if (button2_flag2 ==1){
@@ -105,6 +134,10 @@ setTimer1(100);}
 break;
 case LONG_8:
 	display7seg(8);
+	if (button1_flag ==1 ){
+		button1_flag = 0;
+		status = INIT;
+		}
 	if (timer_flag1 ==1 ){
 timer_flag1 = 0;
 if (button2_flag2 ==1){
@@ -112,8 +145,13 @@ if (button2_flag2 ==1){
 status = LONG_9;
 setTimer1(100);}
 }
+
 break;
 case LONG_9:
+	if (button1_flag ==1 ){
+		button1_flag = 0;
+		status = INIT;
+		}
 	display7seg(9);
 if (timer_flag1 == 1 ){
 timer_flag1 = 0;

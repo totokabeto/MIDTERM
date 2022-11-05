@@ -6,6 +6,12 @@
 */
 
 #include "button.h"
+
+
+/*int State0[3] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+int State1[3] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+int State2[3] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+int State3[3] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};*/
 int KeyReg0 = NORMAL_STATE;
 int KeyReg1 = NORMAL_STATE;
 int KeyReg2 = NORMAL_STATE;
@@ -24,12 +30,22 @@ int Key3Reg3 = NORMAL_STATE;
 
 int TimeOutForKeyPress =  300;
 int button1_flag = 0;
+int button1_flag2 =0;
 int button2_flag = 0;
 int button3_flag = 0;
 int button2_flag2 = 0;
 int button3_flag2 = 0;
 
 
+/*void Sub_key_pressed(int index){
+	if(index == 0)	button1_flag = 1;
+	if(index == 1)	button2_flag = 1;
+	if(index == 2)	button3_flag = 1;
+}
+void Sub_long_pressed(int index){
+	if(index == 0)	button1_flag2 = 1;
+	if(index == 1)	button2_flag2 = 1;
+	if(index == 2)	button3_flag2 = 1;}*/
 void subKeyProcess(){
 button1_flag = 1;
 }
@@ -80,7 +96,7 @@ void getKeyInput2(){
 		        	if (Key2Reg3 == PRESSED_STATE){
 		        		button2_flag2 =1;
 		        		TimeOutForKeyPress = 100;
-		        		//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
+
 		        	}
 		        }
 		    }
@@ -94,22 +110,48 @@ void getKeyInput3(){
 		  if ((Key3Reg1 == Key3Reg0) && (Key3Reg1 == Key3Reg2)){
 		    if (Key3Reg2 != Key3Reg3){
 		      Key3Reg3 = Key3Reg2;
-
 		      if (Key3Reg3 == PRESSED_STATE){
 		        TimeOutForKeyPress = 300;
 		        subKeyProcess3();
 		      }
 		    }else
 		    {
-		       TimeOutForKeyPress --;
-		        if (TimeOutForKeyPress == 0){
-		        	if (Key3Reg3 == PRESSED_STATE){
-		        		button3_flag2 =1;
-		        		TimeOutForKeyPress = 100;
+		    		       TimeOutForKeyPress --;
+		    		        if (TimeOutForKeyPress == 0){
+		    		        	button3_flag2 =1;
+		    		        	TimeOutForKeyPress = 100;
+		    		        }
+		    		    }
+		    		  }
+		    		}
+/*void getKeyInput(){
+	for(int i= 0; i<= 2;i++){
+	State0[i] = State1[i];
+	State1[i] = State2[i];
+	State2[0]  = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
+	State2[1]  = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_14);
+	State2[2]  = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15);
 
-		        	}
-		        }
-		    }
-		  }
+	if((State0[i] == State1[i]) && (State1[i] == State2[i])){
+		if(State2[i] != State3[i]){
+			State3[i] = State2[i];
+			if(State3[i] == PRESSED_STATE){
+				//TODO
+				TimeOutForKeyPress = 300;
+				Sub_key_pressed(i);
+			}
+		}
+		else{
+			if(State3[i] == PRESSED_STATE){
+			TimeOutForKeyPress--;
+			if(TimeOutForKeyPress == 0){
+				//TODO
+				TimeOutForKeyPress = 100;
+				Sub_long_pressed(i);
+			}
+			}
 		}
 
+	}
+}
+}*/

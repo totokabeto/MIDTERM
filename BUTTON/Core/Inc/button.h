@@ -14,6 +14,7 @@
 #define PRESSED_STATE GPIO_PIN_RESET
 
 extern int button1_flag;
+extern int button1_flag2;
 extern int button2_flag;
 extern int button2_flag2;
 extern int button3_flag;
