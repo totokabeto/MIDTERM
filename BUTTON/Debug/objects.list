@@ -1,5 +1,8 @@
+"./Core/Src/LedBlinky.o"
 "./Core/Src/button.o"
+"./Core/Src/display7seg.o"
 "./Core/Src/fsm_automatic.o"
+"./Core/Src/fsm_longpress.o"
 "./Core/Src/fsm_manual.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"
